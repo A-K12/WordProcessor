@@ -6,4 +6,12 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Storage" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WordProcessor.Сore\WordProcessor.Сore.csproj" />
+    </ItemGroup>
+
 </Project>

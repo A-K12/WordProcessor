@@ -3,5 +3,5 @@
 public interface IDictionaryRepository:IRepository<Word>
 {
     IEnumerable<Word> GetByPatternOrDefault(string pattern);
-    Word? FindBySymbolsOrDefault(string word);
+    Word? GetBySymbolsOrDefault(string word);
 }

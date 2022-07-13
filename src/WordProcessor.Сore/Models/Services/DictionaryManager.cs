@@ -12,16 +12,15 @@ public class DictionaryManager:IDictionaryManager
         _repository = repository;
     }
 
-    public void CreateDictionary(IEnumerable<Word> words)
+    public void AddWords(IEnumerable<Word> words)
     {
-        _repository.DeleteAll();
         foreach (var word in words)
         {
             _repository.Add(word);
         }
     }
 
-    public void UpdateDictionary(IEnumerable<Word> words)
+    public void UpdateWords(IEnumerable<Word> words)
     {
         foreach (var word in words)
         {
@@ -31,7 +30,7 @@ public class DictionaryManager:IDictionaryManager
 
     private void UpdateDictionary(Word word)
     {
-        var savedWord = _repository.FindBySymbolsOrDefault(word.Symbols);
+        var savedWord = _repository.GetBySymbolsOrDefault(word.Symbols);
         if (savedWord is null)
         {
             _repository.Add(word);
@@ -43,8 +42,8 @@ public class DictionaryManager:IDictionaryManager
         }
     }
 
-    public void DeleteDictionary()
+    public void ClearDictionary()
     {
-        _repository.DeleteAll();
+        _repository.DeleteAll();    
     }
 }
