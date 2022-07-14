@@ -1,6 +1,6 @@
-﻿using WordProcessor.Сore.Common;
+﻿using WordProcessor.Core.Common;
 
-namespace WordProcessor.Сore.Models.Services;
+namespace WordProcessor.Core.Models.Services;
 
 public class DictionaryManager:IDictionaryManager
 {

@@ -1,4 +1,4 @@
-﻿namespace WordProcessor.Сore.Models;
+﻿namespace WordProcessor.Core.Models;
 
 public interface IRepository<TEntity>
 {

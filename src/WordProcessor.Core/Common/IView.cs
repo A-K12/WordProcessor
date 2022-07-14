@@ -1,4 +1,4 @@
-﻿namespace WordProcessor.Сore.Common;
+﻿namespace WordProcessor.Core.Common;
 
 public interface IView
 {
