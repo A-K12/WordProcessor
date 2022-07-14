@@ -29,73 +29,86 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.словарьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.созданиеСловаряToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.обновлениеСловаряToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.очиститьСловарьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateDictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateDictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteDictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.autocompleteListBox = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.словарьToolStripMenuItem});
+            this.DictionaryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(762, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(577, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // словарьToolStripMenuItem
+            // DictionaryToolStripMenuItem
             // 
-            this.словарьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.созданиеСловаряToolStripMenuItem,
-            this.обновлениеСловаряToolStripMenuItem,
-            this.очиститьСловарьToolStripMenuItem});
-            this.словарьToolStripMenuItem.Name = "словарьToolStripMenuItem";
-            this.словарьToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.словарьToolStripMenuItem.Text = "Словарь";
+            this.DictionaryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateDictionaryToolStripMenuItem,
+            this.UpdateDictionaryToolStripMenuItem,
+            this.DeleteDictionaryToolStripMenuItem});
+            this.DictionaryToolStripMenuItem.Name = "DictionaryToolStripMenuItem";
+            this.DictionaryToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.DictionaryToolStripMenuItem.Text = "Словарь";
             // 
-            // созданиеСловаряToolStripMenuItem
+            // CreateDictionaryToolStripMenuItem
             // 
-            this.созданиеСловаряToolStripMenuItem.Name = "созданиеСловаряToolStripMenuItem";
-            this.созданиеСловаряToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.созданиеСловаряToolStripMenuItem.Text = "Создание словаря";
-            this.созданиеСловаряToolStripMenuItem.Click += new System.EventHandler(this.CreateDictionaryButtonClick);
+            this.CreateDictionaryToolStripMenuItem.Name = "CreateDictionaryToolStripMenuItem";
+            this.CreateDictionaryToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.CreateDictionaryToolStripMenuItem.Text = "Создание словаря";
+            this.CreateDictionaryToolStripMenuItem.Click += new System.EventHandler(this.DictionaryButtonClick);
             // 
-            // обновлениеСловаряToolStripMenuItem
+            // UpdateDictionaryToolStripMenuItem
             // 
-            this.обновлениеСловаряToolStripMenuItem.Name = "обновлениеСловаряToolStripMenuItem";
-            this.обновлениеСловаряToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.обновлениеСловаряToolStripMenuItem.Text = "Обновление словаря";
-            this.обновлениеСловаряToolStripMenuItem.Click += new System.EventHandler(this.UpdateDictionaryButtonClick);
+            this.UpdateDictionaryToolStripMenuItem.Name = "UpdateDictionaryToolStripMenuItem";
+            this.UpdateDictionaryToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.UpdateDictionaryToolStripMenuItem.Text = "Обновление словаря";
+            this.UpdateDictionaryToolStripMenuItem.Click += new System.EventHandler(this.DictionaryButtonClick);
             // 
-            // очиститьСловарьToolStripMenuItem
+            // DeleteDictionaryToolStripMenuItem
             // 
-            this.очиститьСловарьToolStripMenuItem.Name = "очиститьСловарьToolStripMenuItem";
-            this.очиститьСловарьToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.очиститьСловарьToolStripMenuItem.Text = "Очистить словарь";
-            this.очиститьСловарьToolStripMenuItem.Click += new System.EventHandler(this.ClearDictionaryButtonClick);
+            this.DeleteDictionaryToolStripMenuItem.Name = "DeleteDictionaryToolStripMenuItem";
+            this.DeleteDictionaryToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.DeleteDictionaryToolStripMenuItem.Text = "Очистить словарь";
+            this.DeleteDictionaryToolStripMenuItem.Click += new System.EventHandler(this.DictionaryButtonClick);
             // 
-            // textBox1
+            // richTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(738, 286);
-            this.textBox1.TabIndex = 1;
+            this.richTextBox.Location = new System.Drawing.Point(12, 27);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(553, 224);
+            this.richTextBox.TabIndex = 2;
+            this.richTextBox.Text = "";
+            this.richTextBox.SelectionChanged += new System.EventHandler(this.SelectionCaretChanged);
+            this.richTextBox.TextChanged += new System.EventHandler(this.TextBoxChanged);
+            // 
+            // autocompleteListBox
+            // 
+            this.autocompleteListBox.ItemHeight = 15;
+            this.autocompleteListBox.Location = new System.Drawing.Point(0, 0);
+            this.autocompleteListBox.Name = "autocompleteListBox";
+            this.autocompleteListBox.Size = new System.Drawing.Size(100, 94);
+            this.autocompleteListBox.TabIndex = 3;
+            this.autocompleteListBox.Click += new System.EventHandler(this.AutcompleteListBoxItemSelected);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 325);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(577, 263);
+            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.autocompleteListBox);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Word Processor";
@@ -103,16 +116,20 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.autocompleteListBox.BringToFront();
 
         }
+
+
 
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem словарьToolStripMenuItem;
-        private ToolStripMenuItem созданиеСловаряToolStripMenuItem;
-        private ToolStripMenuItem обновлениеСловаряToolStripMenuItem;
-        private ToolStripMenuItem очиститьСловарьToolStripMenuItem;
-        private TextBox textBox1;
+        private ToolStripMenuItem DictionaryToolStripMenuItem;
+        private ToolStripMenuItem CreateDictionaryToolStripMenuItem;
+        private ToolStripMenuItem UpdateDictionaryToolStripMenuItem;
+        private ToolStripMenuItem DeleteDictionaryToolStripMenuItem;
+        private RichTextBox richTextBox;
+        private ListBox autocompleteListBox;
     }
 }

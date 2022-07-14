@@ -1,3 +1,5 @@
+using WordProcessor.Core.Presenters;
+
 namespace WordProcessor.WinForms;
 
 static class Program
@@ -8,6 +10,8 @@ static class Program
     [STAThread]
     static void Main()
     {
-        Application.Run(new MainForm());
+        var view = new MainForm();
+        var presenter = new MainFormPresenter(view);
+        Application.Run(view);
     }
 }

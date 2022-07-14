@@ -4,7 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{03082BBF-7C7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45B3E93A-27C6-44A4-A321-7475EF123E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordProcessor.Сore", "src\WordProcessor.Сore\WordProcessor.Сore.csproj", "{9736E2C2-394E-41C2-8BDE-DBA318D603FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordProcessor.Core", "src\WordProcessor.Core\WordProcessor.Core.csproj", "{9736E2C2-394E-41C2-8BDE-DBA318D603FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordProcessor.Infrastructure", "src\WordProcessor.Infrastructure\WordProcessor.Infrastructure.csproj", "{97103716-E4E5-493F-AA67-D6A907FE5E9C}"
 EndProject
