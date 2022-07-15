@@ -16,12 +16,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WordProcessor.WinForms
 {
-    public partial class MainForm : Form, IMainFormView
+    public partial class MainForm : Form, ITextInputView, IMessageBoxView, IDictionaryManagerView, IWordSuggestionView
     {
         
         public event Action? UserTextChanged;
         public event Action<string>? DictionaryButtonsClicked;
         public event Action TextSelectionChanged;
+        public Word[] SuggestionWords { get; set; }
         public event Action? WordSuggestionClicked;
 
         public string UserText
@@ -58,14 +59,14 @@ namespace WordProcessor.WinForms
             throw new NotImplementedException();
         }
 
-        public void ShowWordSuggestionWindow(IEnumerable<Word> words)
+        public void ShowWordSuggestionWindow()
         {
             Point listBoxLocation = richTextBox.GetPositionFromCharIndex(richTextBox.SelectionStart);
             listBoxLocation.X += richTextBox.Location.X;
             listBoxLocation.Y += richTextBox.Location.Y + 20;
             autocompleteListBox.Location = listBoxLocation;
      
-            autocompleteListBox.Items.AddRange(words.Select(word => word.Symbols).ToArray());
+           // autocompleteListBox.Items.AddRange(words.Select(word => word.Symbols).ToArray());
 
             if(!autocompleteListBox.Visible)
                 autocompleteListBox.Show();

@@ -11,7 +11,7 @@ static class Program
     static void Main()
     {
         var view = new MainForm();
-        var presenter = new MainFormPresenter(view);
+        var presenter = new MainFormPresenter(view, view, view);
         Application.Run(view);
     }
 }

@@ -99,6 +99,7 @@
             this.autocompleteListBox.Name = "autocompleteListBox";
             this.autocompleteListBox.Size = new System.Drawing.Size(100, 94);
             this.autocompleteListBox.TabIndex = 3;
+            this.autocompleteListBox.Visible = false;
             this.autocompleteListBox.Click += new System.EventHandler(this.AutcompleteListBoxItemSelected);
             // 
             // MainForm
@@ -116,7 +117,6 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.autocompleteListBox.BringToFront();
 
         }
 
