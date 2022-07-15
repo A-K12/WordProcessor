@@ -6,31 +6,37 @@ namespace WordProcessor.Core.Presenters;
 
 public class MainFormPresenter:IPresenter
 {
-    private readonly IMainFormView _view;
+    private readonly ITextInputView _mainView;
+    private readonly IDictionaryManagerView _dictionaryManagerView;
+    private readonly IWordSuggestionView _wordSuggestionView;
 
-    public MainFormPresenter(IMainFormView view)
+    public MainFormPresenter(ITextInputView mainView, 
+        IDictionaryManagerView dictionaryManagerView, 
+        IWordSuggestionView wordSuggestionView)
     {
-        _view = view;
+        _mainView = mainView;
+        _dictionaryManagerView = dictionaryManagerView;
+        _wordSuggestionView = wordSuggestionView;
         
-        _view.UserTextChanged += HandleChangedText;
-        _view.DictionaryButtonsClicked += HandleClickedDictionaryButtons;
-        _view.TextSelectionChanged += HandleChangedSelection;
-        _view.WordSuggestionClicked += HandleClickedWord;
+        _mainView.UserTextChanged += HandleChangedText;
+        _mainView.TextSelectionChanged += HandleChangedSelection;
+        _dictionaryManagerView.DictionaryButtonsClicked += HandleClickedDictionaryButtons;
+        _wordSuggestionView.WordSuggestionClicked += HandleClickedWord;
     }
 
     private void HandleClickedWord()
     {
-        //throw new NotImplementedException();
+        throw new NotImplementedException();
     }
 
     private void HandleChangedSelection()
     {
-        _view.CloseWordSuggestionWindow();
+        _wordSuggestionView.Close();
     }
 
     private void HandleClickedDictionaryButtons(string buttonName)
     {
-        _view.ShowMessage(buttonName+"is clicked");
+        throw new NotImplementedException();
     }
 
     private void HandleChangedText()
@@ -43,15 +49,18 @@ public class MainFormPresenter:IPresenter
             new Word {Symbols = "persimmon", UsageFrequency = 3},
             new Word {Symbols = "persimmon", UsageFrequency = 3},
         };
-        if (_view.CaretPosition == 0) return;
-        if (Char.IsLetter(_view.UserText, _view.CaretPosition-1))
-            _view.ShowWordSuggestionWindow(_words);
+        if (_mainView.CaretPosition == 0) return;
+        if (Char.IsLetter(_mainView.UserText, _mainView.CaretPosition - 1))
+        {
+            _wordSuggestionView.SuggestionWords = _words;
+            _wordSuggestionView.Show();
+        }
         else
-            _view.CloseWordSuggestionWindow();
+            _wordSuggestionView.Close();
     }
 
     public void Run()
     {
-        _view.Show();
+        _mainView.Show();
     }
 }
